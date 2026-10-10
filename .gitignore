@@ -1,2 +1,39 @@
-.venv
+# ---------------------------------------------------------------
+# Secrets: plaintext secrets must never reach Git (see docs/security.md)
+# ---------------------------------------------------------------
+*vault_pass*
+.vault_pass*
+*.vault-pass
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+id_*
+!*.pub
+wg*.conf
+*wireguard*.conf
+kubeconfig*
+*.kubeconfig
+.kube/
+.env
+.env.*
+!.env.example
+secrets/
+*.secret.yml
+*.secret.yaml
 
+# ---------------------------------------------------------------
+# Generated and local state
+# ---------------------------------------------------------------
+# Audit output describes live infrastructure. Keep it on the control node only.
+ansible/reports/
+ansible/logs/
+*.retry
+.ansible/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
